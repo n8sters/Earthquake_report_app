@@ -1,4 +1,6 @@
 Quake Report App
+
+Based on the app created as part of the Udacity Android Networking course, with some changes. 
 ===================================
 
 This app displays a list of recent earthquakes in the world
