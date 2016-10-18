@@ -9,22 +9,22 @@ package com.example.android.quakereport;
         /**
          * Magnitude of the earthquake
          */
-        private double mMagnitude;
+        public final double mMagnitude;
 
         /**
          * Location of the earthquake
          */
-        private String mLocation;
+        public final String mLocation;
 
         /**
          * Time of the earthquake
          */
-        private long mTimeInMilliseconds;
+        public final long mTimeInMilliseconds;
 
         /**
          * Website URL of the earthquake
          */
-        private String mUrl;
+        public final String mUrl;
 
         /**
          * Constructs a new {@link Earthquake} object.
