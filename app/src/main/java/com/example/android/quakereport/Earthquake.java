@@ -4,36 +4,69 @@ package com.example.android.quakereport;
  * Created by ncpow on 10/5/2016.
  */
 
-public class Earthquake {
-    private String mLocation;
+    public class Earthquake {
 
-    private String mTimeInMilliseconds;
+        /**
+         * Magnitude of the earthquake
+         */
+        private double mMagnitude;
 
-    private String mMagnitude;
+        /**
+         * Location of the earthquake
+         */
+        private String mLocation;
 
+        /**
+         * Time of the earthquake
+         */
+        private long mTimeInMilliseconds;
 
-    //earthquake constructor
-    public Earthquake(String magnitude, String location, String timeInMilliseconds) {
-        mMagnitude = magnitude;
-        mLocation = location;
-        mTimeInMilliseconds = timeInMilliseconds;
+        /**
+         * Website URL of the earthquake
+         */
+        private String mUrl;
+
+        /**
+         * Constructs a new {@link Earthquake} object.
+         *
+         * @param magnitude          is the magnitude (size) of the earthquake
+         * @param location           is the location where the earthquake happened
+         * @param timeInMilliseconds is the time in milliseconds (from the Epoch) when the
+         *                           earthquake happened
+         * @param url                is the website URL to find more details about the earthquake
+         */
+        public Earthquake(double magnitude, String location, long timeInMilliseconds, String url) {
+            mMagnitude = magnitude;
+            mLocation = location;
+            mTimeInMilliseconds = timeInMilliseconds;
+            mUrl = url;
+        }
+
+        /**
+         * Returns the magnitude of the earthquake.
+         */
+        public double getMagnitude() {
+            return mMagnitude;
+        }
+
+        /**
+         * Returns the location of the earthquake.
+         */
+        public String getLocation() {
+            return mLocation;
+        }
+
+        /**
+         * Returns the time of the earthquake.
+         */
+        public long getTimeInMilliseconds() {
+            return mTimeInMilliseconds;
+        }
+
+        /**
+         * Returns the website URL to find more information about the earthquake.
+         */
+        public String getUrl() {
+            return mUrl;
+        }
     }
-
-
-    //returns the location
-    public String getEarthquakeLocation() {
-        return mLocation;
-    }
-
-
-    //gets the time in UNIX time
-    public String getTimeInMilliseconds() {
-        return mTimeInMilliseconds;
-    }
-
-
-    //gets the magnitude of the earthquake
-    public String getMagnitude() {
-        return mMagnitude;
-    }
-}
